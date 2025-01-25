@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#toolBox {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  margin: 5px;
+}

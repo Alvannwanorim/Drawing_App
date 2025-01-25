@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DRAWING APP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <select id="toolBox" onchange="changeTool(this.value)">
+      <option value="path" selected>Path</option>
+      <option value="rect">Rect</option>
+    </select>
+    <script src="script.js"></script>
+    <script src="shapes/rect.js"></script>
+    <script src="shapes/path.js"></script>
+  </body>
+</html>
