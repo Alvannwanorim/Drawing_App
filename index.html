@@ -6,13 +6,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <canvas id="myCanvas"></canvas>
-    <select id="toolBox" onchange="changeTool(this.value)">
-      <option value="path" selected>Path</option>
-      <option value="rect">Rect</option>
-    </select>
-    <script src="script.js"></script>
+    <canvas id="myCanvas"></canvas><canvas id="helperCanvas"></canvas>
+    <div id="toolBox">
+      <select onchange="changeTool(this.value)">
+        <option value="path" selected>Path</option>
+        <option value="rect">Rect</option>
+        <option value="select">Select</option>
+      </select>
+      <div>
+        <input
+          type="color"
+          name="fillColor"
+          id="fillColor"
+          value="#ff0000"
+          title="Fill color"
+        />
+        <input type="checkbox" name="" id="fill" checked title="fill" />
+        <br />
+        <!-- <label for="fillColor">Fill</label> -->
+        <input
+          type="color"
+          name="strokeColor"
+          id="strokeColor"
+          value="#dddddd"
+          title="Line color"
+        />
+        <input type="checkbox" name="" id="stroke" checked title="stroke" />
+
+        <br />
+        <input
+          type="range"
+          name=""
+          id="strokeWidth"
+          value="5"
+          min="0.1"
+          max="10"
+          title="Stroke Width"
+        />
+      </div>
+    </div>
+    <script src="shapes/shape.js"></script>
     <script src="shapes/rect.js"></script>
     <script src="shapes/path.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
